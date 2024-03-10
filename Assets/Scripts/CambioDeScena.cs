@@ -10,14 +10,24 @@ public class CambioDeScena : MonoBehaviour
         SceneManager.LoadScene("Bienvenida");
     }
 
-    public void IrNivel2()
+    public void Continuar()
     {
-        SceneManager.LoadScene("Nivel#2");
+        SceneManager.LoadScene("Bosque");
     }
 
-    public void IrNivel3()
+    public void Personalizacion()
     {
-        SceneManager.LoadScene("Nivel#3");
+        SceneManager.LoadScene("Personalización");
+    }
+
+    public void Instrucciones()
+    {
+        SceneManager.LoadScene("Instrucciones");
+    }
+
+    public void Bosque()
+    {
+        SceneManager.LoadScene("Bosque");
     }
 
     public void Salir()

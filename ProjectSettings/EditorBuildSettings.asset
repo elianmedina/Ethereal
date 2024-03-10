@@ -17,6 +17,18 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/Personalizaci\xF3n.unity"
     guid: 3af58527e5e857649bacd7ce17737270
+  - enabled: 1
+    path: Assets/Scenes/Bosque.unity
+    guid: 258540b8b2c42f648982f1533b731b7f
+  - enabled: 1
+    path: Assets/Scenes/Instrucciones.unity
+    guid: efe5b14d6c74b7849b4c52eac659fdc1
+  - enabled: 1
+    path: Assets/Scenes/RetroPositivaNv1.unity
+    guid: d728693f4744d484d94b02adfc47e241
+  - enabled: 1
+    path: Assets/Scenes/Nivel1.unity
+    guid: af597cae3c9d274479c5be3cb1b9b275
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b4fcfaf1657d1fe419e089fd2c48839a,
       type: 2}
