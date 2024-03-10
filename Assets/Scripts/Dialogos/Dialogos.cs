@@ -13,6 +13,7 @@ public class Dialogos : MonoBehaviour
 
     public GameObject panelDespuesDelTexto; // Referencia al panel que se mostrará después de la última línea de texto
     public GameObject panelCierraDespuesDelTexto;
+    public GameObject Buho;
 
     void Update()
     {
@@ -75,6 +76,7 @@ public class Dialogos : MonoBehaviour
         {
             panelDespuesDelTexto.SetActive(true); // Activar el panel después de la última línea de texto
             panelCierraDespuesDelTexto.SetActive(false);
+            Buho.SetActive(false);
         }
     }
 }

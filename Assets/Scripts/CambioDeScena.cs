@@ -30,6 +30,28 @@ public class CambioDeScena : MonoBehaviour
         SceneManager.LoadScene("Bosque");
     }
 
+
+    public void Nivel1()
+    {
+        SceneManager.LoadScene("Nivel1");
+    }
+
+    public void Inicio()
+    {
+        SceneManager.LoadScene("Inicio");
+    }
+
+
+    public void Niveles()
+    {
+        SceneManager.LoadScene("Niveles");
+    }
+
+    public void Configuracion()
+    {
+        SceneManager.LoadScene("Configuracion");
+    }
+
     public void Salir()
     {
 #if UNITY_EDITOR
