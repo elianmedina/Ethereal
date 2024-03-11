@@ -2843,12 +2843,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   presionarTextGO: {fileID: 975909475}
   sliderTiempo: {fileID: 585482803}
-  sliderTiempoParaPerder: {fileID: 0}
+  sliderTiempoParaPerder: {fileID: 1899593869}
   timePressedInhalar: 0
   timePressedAguantar: 0
   timePressedExhalar: 0
   timerParaPerderAguantar: 2
   timerParaPerderExhalar: 2
+  retoCompletado: 0
 --- !u!1 &2145083608
 GameObject:
   m_ObjectHideFlags: 0
