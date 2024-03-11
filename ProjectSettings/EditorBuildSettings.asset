@@ -8,6 +8,30 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Interfaces/Bienvenida.unity
+    guid: 5a8b2db34b9cde641bf5aa245c1ad3fd
+  - enabled: 1
+    path: Assets/Scenes/Interfaces/Inicio.unity
+    guid: 23886387a8b681046b5cca08187ff77e
+  - enabled: 1
+    path: "Assets/Scenes/Personalizaci\xF3n.unity"
+    guid: 3af58527e5e857649bacd7ce17737270
+  - enabled: 1
+    path: Assets/Scenes/Bosque.unity
+    guid: 258540b8b2c42f648982f1533b731b7f
+  - enabled: 1
+    path: Assets/Scenes/Interfaces/Instrucciones.unity
+    guid: efe5b14d6c74b7849b4c52eac659fdc1
+  - enabled: 1
+    path: Assets/Scenes/Retroalimentacion/RetroNegativaNv1.unity
+    guid: d728693f4744d484d94b02adfc47e241
+  - enabled: 1
+    path: Assets/Scenes/Nivel/Nivel1.unity
+    guid: af597cae3c9d274479c5be3cb1b9b275
+  - enabled: 1
+    path: Assets/Scenes/Mapa/Niveles.unity
+    guid: e3fc2cc9a48b1234bb7deb820b28053a
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b4fcfaf1657d1fe419e089fd2c48839a,
       type: 2}
