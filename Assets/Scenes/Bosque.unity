@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -639,7 +639,6 @@ GameObject:
   - component: {fileID: 395433497}
   - component: {fileID: 395433496}
   - component: {fileID: 395433495}
-  - component: {fileID: 395433498}
   m_Layer: 5
   m_Name: Cerrar
   m_TagString: Untagged
@@ -711,14 +710,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 395433498}
+      - m_Target: {fileID: 599486936}
         m_TargetAssemblyTypeName: Opciones, Assembly-CSharp
-        m_MethodName: OcultarCanvasOpciones
-        m_Mode: 1
+        m_MethodName: InteractuarEntreCanvas
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -761,20 +760,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395433493}
   m_CullTransparentMesh: 1
---- !u!114 &395433498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395433493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b818620f01f38ab44b68dae4c69fbbf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasOne: {fileID: 50292405}
-  canvasDos: {fileID: 998066616}
 --- !u!1 &400985407
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +886,6 @@ GameObject:
   - component: {fileID: 449624706}
   - component: {fileID: 449624705}
   - component: {fileID: 449624704}
-  - component: {fileID: 449624707}
   m_Layer: 5
   m_Name: como jugar
   m_TagString: Untagged
@@ -973,9 +957,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 449624707}
+      - m_Target: {fileID: 599486934}
         m_TargetAssemblyTypeName: CambioDeScena, Assembly-CSharp
-        m_MethodName: Instrucciones
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1023,18 +1007,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449624702}
   m_CullTransparentMesh: 1
---- !u!114 &449624707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449624702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15295f26e9f8b99409071f2c2b86d8d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &464929300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1219,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &599486934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 599486935}
+  - component: {fileID: 599486936}
+  m_Layer: 5
+  m_Name: CanvasController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &599486935
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599486934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 834790184}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &599486936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599486934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b818620f01f38ab44b68dae4c69fbbf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paneles:
+  - {fileID: 50292405}
+  - {fileID: 998066616}
+  - {fileID: 1221276590}
+  - {fileID: 757356707}
 --- !u!1 &655302166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,7 +1762,6 @@ GameObject:
   - component: {fileID: 757356711}
   - component: {fileID: 757356710}
   - component: {fileID: 757356709}
-  - component: {fileID: 757356712}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1808,14 +1832,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 757356712}
+      - m_Target: {fileID: 599486936}
         m_TargetAssemblyTypeName: Opciones, Assembly-CSharp
-        m_MethodName: MostrarCanvasOpciones
-        m_Mode: 1
+        m_MethodName: InteractuarEntreCanvas
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1858,20 +1882,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757356707}
   m_CullTransparentMesh: 1
---- !u!114 &757356712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 757356707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b818620f01f38ab44b68dae4c69fbbf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasOne: {fileID: 1221276590}
-  canvasDos: {fileID: 757356707}
 --- !u!1001 &803674904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2049,6 +2059,7 @@ RectTransform:
   - {fileID: 1221276591}
   - {fileID: 998066617}
   - {fileID: 50292406}
+  - {fileID: 599486935}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2519,7 +2530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66187883c34cf21418c09773670181d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasLegal: {fileID: 998066616}
+  Opciones: {fileID: 599486936}
 --- !u!1001 &1274057725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2958,7 +2969,6 @@ GameObject:
   - component: {fileID: 1372036998}
   - component: {fileID: 1372036997}
   - component: {fileID: 1372036996}
-  - component: {fileID: 1372036995}
   m_Layer: 5
   m_Name: Cerrar
   m_TagString: Untagged
@@ -2986,20 +2996,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -149.96}
   m_SizeDelta: {x: 417, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1372036995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1372036993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b818620f01f38ab44b68dae4c69fbbf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasOne: {fileID: 998066616}
-  canvasDos: {fileID: 0}
 --- !u!114 &1372036996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3044,10 +3040,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1372036995}
+      - m_Target: {fileID: 599486936}
         m_TargetAssemblyTypeName: Opciones, Assembly-CSharp
-        m_MethodName: OcultarCanvasOpciones
-        m_Mode: 1
+        m_MethodName: InteractuarEntreCanvas
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3106,7 +3102,6 @@ GameObject:
   - component: {fileID: 1420152303}
   - component: {fileID: 1420152302}
   - component: {fileID: 1420152301}
-  - component: {fileID: 1420152304}
   m_Layer: 5
   m_Name: quien eres
   m_TagString: Untagged
@@ -3178,14 +3173,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1420152304}
+      - m_Target: {fileID: 599486936}
         m_TargetAssemblyTypeName: Opciones, Assembly-CSharp
-        m_MethodName: MostrarCanvasOpciones
-        m_Mode: 1
+        m_MethodName: InteractuarEntreCanvas
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3228,20 +3223,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420152299}
   m_CullTransparentMesh: 1
---- !u!114 &1420152304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1420152299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b818620f01f38ab44b68dae4c69fbbf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasOne: {fileID: 50292405}
-  canvasDos: {fileID: 998066616}
 --- !u!1 &1530233064
 GameObject:
   m_ObjectHideFlags: 0
@@ -3509,9 +3490,8 @@ GameObject:
   - component: {fileID: 1586138206}
   - component: {fileID: 1586138205}
   - component: {fileID: 1586138204}
-  - component: {fileID: 1586138207}
   m_Layer: 5
-  m_Name: Button
+  m_Name: CerrarMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3581,10 +3561,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1586138207}
+      - m_Target: {fileID: 599486936}
         m_TargetAssemblyTypeName: Opciones, Assembly-CSharp
-        m_MethodName: OcultarCanvasOpciones
-        m_Mode: 1
+        m_MethodName: InteractuarEntreCanvas
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3631,20 +3611,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586138202}
   m_CullTransparentMesh: 1
---- !u!114 &1586138207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1586138202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b818620f01f38ab44b68dae4c69fbbf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasOne: {fileID: 1221276590}
-  canvasDos: {fileID: 757356707}
 --- !u!1001 &1610741041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3663,11 +3629,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 817685260, guid: b21f208237dfa604184a809772254745, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 817685262, guid: b21f208237dfa604184a809772254745, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1006582939, guid: b21f208237dfa604184a809772254745, type: 3}
       propertyPath: m_UpdateMode
@@ -3679,15 +3645,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1014210310, guid: b21f208237dfa604184a809772254745, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1014210311, guid: b21f208237dfa604184a809772254745, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1014210315, guid: b21f208237dfa604184a809772254745, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1014210315, guid: b21f208237dfa604184a809772254745, type: 3}
       propertyPath: lookSensitivity
@@ -4219,7 +4185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1767514447}
   - component: {fileID: 1767514446}
-  - component: {fileID: 1767514445}
+  - component: {fileID: 1767514448}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -4227,26 +4193,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1767514445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1767514444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &1767514446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4277,6 +4223,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1767514448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767514444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1 &1827906378
 GameObject:
   m_ObjectHideFlags: 0

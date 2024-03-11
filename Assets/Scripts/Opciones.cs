@@ -4,20 +4,38 @@ using UnityEngine;
 
 public class Opciones : MonoBehaviour
 {
-    public GameObject canvasOne;
-    public GameObject canvasDos;
-
-    // Método para activar el canvas legal
-    public void MostrarCanvasOpciones()
+    public GameObject[] paneles;
+    public void InteractuarEntreCanvas(int _int) // Va el index del la lista de paneles +1 para que lo identifique
     {
-        canvasOne.SetActive(true);
-        canvasDos.SetActive(false);
+        if(_int == 0) // en _int cuando se pone 0 quiere decir que cierra todos lo paneles
+        {
+            for (int i = 0; i < paneles.Length; i++)
+            {
+                if(i == 3) // Activa el botón de Opciones
+                {
+                    paneles[i].gameObject.SetActive(true);
+                }
+                else
+                {
+                    paneles[i].gameObject.SetActive(false);
+                }
+              
+            }
+        }
+        else //Cuando se pone 1 o más activa dicho panel ubicado en arreglo
+        {
+            for (int i = 0; i < paneles.Length; i++)
+            {
+                if (i == _int-1)
+                {
+                    paneles[i].gameObject.SetActive(true);
+                }
+                else
+                {
+                    paneles[i].gameObject.SetActive(false);
+                }
+            }
+        }    
     }
 
-    // Método para desactivar el canvas legal
-    public void OcultarCanvasOpciones()
-    {
-        canvasOne.SetActive(false);
-        canvasDos.SetActive(true);
-    }
 }
