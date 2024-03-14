@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class MapaNivelesController : MonoBehaviour
 {
-    [SerializeField] bool estaEnNivel1, estaEnNivel2, estaEnNivel3, estaEnAlgunPanel;
+    [SerializeField] bool estaEnNivel1, estaEnNivel2, estaEnNivel3, completoTodosLosNiveles, estaEnAlgunPanel;
 
     public GameObject[] panelitosNiveles;
     public GameObject[] panelesPropiosNiveles;
@@ -57,6 +57,10 @@ public class MapaNivelesController : MonoBehaviour
                         panelesPropiosNiveles[i].SetActive(false);
                     }
                 }
+                if(estaEnNivel2 || estaEnNivel3 || completoTodosLosNiveles)
+                {
+                    panelesPropiosNiveles[0].transform.GetChild(4).gameObject.SetActive(true);
+                }
             }
             if (obj.name.Equals("Nivel2"))
             {
@@ -71,15 +75,20 @@ public class MapaNivelesController : MonoBehaviour
                         panelesPropiosNiveles[i].SetActive(false);
                     }
                 }
-                if (estaEnNivel2 || estaEnNivel3)
+                if (estaEnNivel2 || estaEnNivel3 || completoTodosLosNiveles)
                 {
                     botonesJugarNivel2y3[0].transform.GetChild(1).gameObject.SetActive(false);
                     botonesJugarNivel2y3[0].GetComponent<Button>().interactable = true;
+                    if (estaEnNivel3 || completoTodosLosNiveles)
+                    {
+                        panelesPropiosNiveles[1].transform.GetChild(4).gameObject.SetActive(true);
+                    }
                 }
                 else
                 {
                     botonesJugarNivel2y3[0].transform.GetChild(1).gameObject.SetActive(true);
                     botonesJugarNivel2y3[0].GetComponent<Button>().interactable = false;
+                    panelesPropiosNiveles[1].transform.GetChild(4).gameObject.SetActive(false);
                 }
             }
             if (obj.name.Equals("Nivel3"))
@@ -95,16 +104,24 @@ public class MapaNivelesController : MonoBehaviour
                         panelesPropiosNiveles[i].SetActive(false);
                     }
                 }
-                if (estaEnNivel3)
+                if (estaEnNivel3 || completoTodosLosNiveles)
                 {
                     botonesJugarNivel2y3[1].transform.GetChild(1).gameObject.SetActive(false);
                     botonesJugarNivel2y3[1].GetComponent<Button>().interactable = true;
+                    if (completoTodosLosNiveles)
+                    {
+                        panelesPropiosNiveles[2].transform.GetChild(4).gameObject.SetActive(true);
+                    }
                 }
                 else
                 {
                     botonesJugarNivel2y3[1].transform.GetChild(1).gameObject.SetActive(true);
                     botonesJugarNivel2y3[1].GetComponent<Button>().interactable = false;
                 }
+            }
+            for (int i = 0; i < panelitosNiveles.Length; i++)
+            {
+                panelitosNiveles[i].SetActive(false);
             }
         }
     }
@@ -160,6 +177,13 @@ public class MapaNivelesController : MonoBehaviour
                 }
             }
         }
+        else
+        {
+                for (int i = 0; i < panelitosNiveles.Length; i++)
+                {
+                    panelitosNiveles[i].SetActive(false);
+                }
+        }
     }
 
     void verificarNivelActualJugador()
@@ -185,6 +209,13 @@ public class MapaNivelesController : MonoBehaviour
             ConfiguracionInicialJugador(player);
             StartCoroutine(esperaDeMilisegundos(player));
         }
+        if(completoTodosLosNiveles)
+        {
+            GameObject player = Instantiate(jugadorPrefab, nivelesTransform[2]);
+            ConfiguracionInicialJugador(player);
+            StartCoroutine(esperaDeMilisegundos(player));
+        }
+
     }
 
     void ConfiguracionInicialJugador(GameObject player)
